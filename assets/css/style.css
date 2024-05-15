@@ -1,0 +1,416 @@
+@font-face {
+  font-family: "AxiformaLight";
+  src: url(../../assets/font/Axiforma-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "AxiformaRegular";
+  src: url(../../assets/font/Axiforma-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "AxiformaBold";
+  src: url(../../assets/font/Axiforma-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "AxiformaBlack";
+  src: url(../../assets/font/Axiforma-Black.ttf) format("truetype");
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.2rem;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1.375rem;
+}
+
+input, button, ul, h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+@media (min-width: null) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: null) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.open {
+  display: block;
+  opacity: 1;
+}
+
+.close {
+  display: none;
+  opacity: 0;
+}
+
+.password__background {
+  /* The image used */
+  background-image: url("../images/password__background.jpg");
+  /* Full height */
+  height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: -400px;
+  background-repeat: no-repeat;
+  background-size: 1600px;
+}
+
+@media (min-width: 40em) {
+  .password__background {
+    background-size: 2800px;
+    background-position: -400px;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .password__background {
+    background-size: 2800px;
+    background-position: -20px;
+  }
+}
+
+.password__background__blur {
+  backdrop-filter: blur(25px);
+  height: 100%;
+}
+
+.password__login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3rem 2rem;
+  z-index: 1;
+  width: 100%;
+  height: 60vh;
+  max-width: 600px;
+  max-height: 500px;
+  background-color: rgba(123, 123, 124, 0.5);
+  backdrop-filter: blur(10px);
+  transition: 0.2s all ease-in-out;
+}
+
+.password__login__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.password__login__header {
+  font-family: "AxiformaLight";
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  text-align: center;
+}
+
+.password__login__separator {
+  margin: 16px 0 120px;
+  width: 100%;
+  height: 1px;
+  background-color: #b6b6b6;
+}
+
+.password__login__title {
+  margin: auto;
+  width: 90%;
+  max-width: 350px;
+  margin-bottom: 1.5rem;
+  font-family: "AxiformaBold";
+  text-transform: uppercase;
+}
+
+.password__login__paragraph {
+  margin: auto;
+  width: 90%;
+  max-width: 350px;
+  margin-bottom: 1.5rem;
+  font-size: 0.75rem;
+}
+
+.password__login__input {
+  margin: auto;
+  width: 90%;
+  max-width: 350px;
+}
+
+.password__login__input input[type="password"] {
+  width: 65%;
+  background-color: transparent;
+  border: 1.5px solid white;
+  padding-left: 1rem;
+  color: white;
+  font-family: "AxiformaLight";
+  font-size: 0.53333rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 40em) {
+  .password__login__input input[type="password"] {
+    font-size: 0.75rem;
+  }
+}
+
+.password__login__input input[type="password"]::placeholder {
+  color: white;
+}
+
+.password__login__input input[type="submit"] {
+  width: 35%;
+  padding: 0.625rem;
+  border: 1.5px solid white;
+  background-color: white;
+  font-family: "AxiformaBold";
+  font-size: 0.53333rem;
+  text-transform: uppercase;
+  transition: 0.2s all ease-in-out;
+}
+
+@media (min-width: 40em) {
+  .password__login__input input[type="submit"] {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+.password__login__input input[type="submit"]:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+}
+
+.password__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.password__header__macbuttons {
+  padding-left: 1.375rem;
+}
+
+.password__header__macbuttons span {
+  height: 1rem;
+  width: 1rem;
+  background-color: #fff;
+  border: 1px solid #707070;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.password__header__macbuttons span:hover:nth-child(1) {
+  background-color: #FF605C;
+}
+
+.password__header__macbuttons span:hover:nth-child(2) {
+  background-color: #FFBD44;
+}
+
+.password__header__macbuttons span:hover:nth-child(3) {
+  background-color: #00CA4E;
+}
+
+.password__header__macbuttons span:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.password__header__login {
+  padding: 1rem 1.5rem;
+  background-color: #7b7b7c;
+  color: #fff;
+  font-family: "AxiformaBold";
+  font-size: 0.53333rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.password__header__login:hover {
+  background-color: rgba(123, 123, 124, 0.6);
+}
+
+@media (min-width: 40em) {
+  .password__header__login {
+    padding: 1.5rem 2rem;
+    font-size: 0.75rem;
+  }
+}
+
+.password__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 500px;
+  transform: translate(-50%, -50%);
+}
+
+.password__content__logo {
+  display: block;
+  margin: 0 auto 3rem;
+  width: 90px;
+}
+
+@media (min-width: 40em) {
+  .password__content__logo {
+    width: 100px;
+  }
+}
+
+.password__content__title {
+  margin: auto;
+  font-family: "AxiformaBlack";
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  .password__content__title {
+    font-size: 1.875rem;
+  }
+}
+
+.password__content__paragraph {
+  margin: 2rem auto 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+  width: 80%;
+}
+
+@media (min-width: 40em) {
+  .password__content__paragraph {
+    font-size: 0.875rem;
+    width: 80%;
+  }
+}
+
+.password__content__input {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 300px;
+}
+
+.password__content__input input[type="email"] {
+  width: 65%;
+  background-color: transparent;
+  border: 1.5px solid white;
+  padding-left: 1rem;
+  color: white;
+  font-family: "AxiformaLight";
+  font-size: 0.53333rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 40em) {
+  .password__content__input input[type="email"] {
+    font-size: 0.75rem;
+  }
+}
+
+.password__content__input input[type="email"]::placeholder {
+  color: white;
+}
+
+.password__content__input input[type="submit"] {
+  width: 35%;
+  padding: 0.625rem;
+  border: 1.5px solid white;
+  background-color: white;
+  font-family: "AxiformaBold";
+  font-size: 0.53333rem;
+  text-transform: uppercase;
+  transition: 0.2s all ease-in-out;
+}
+
+@media (min-width: 40em) {
+  .password__content__input input[type="submit"] {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+.password__content__input input[type="submit"]:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+}
+
+.password__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 2rem;
+  font-family: "AxiformaLight";
+  text-transform: uppercase;
+  font-size: 0.53333rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+@media (min-width: 40em) {
+  .password__footer {
+    padding-bottom: 3rem;
+    font-size: 0.75rem;
+  }
+}
+
+.password__footer li {
+  cursor: default;
+  transition: 0.2s all ease-in-out;
+}
+
+.password__footer li:not(:last-child)::after {
+  content: '|';
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.password__footer li:hover {
+  transform: scale(1.05);
+}
