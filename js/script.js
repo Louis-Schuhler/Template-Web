@@ -8,7 +8,7 @@ password__header__loginBtn.addEventListener('click', function(){
         password__login.classList.remove("close")
     }else{
         password__login.classList.add("close")
-        password__login.classList.remove("open")
+        password__login.classList.remove("open") 
     }
 })
 
