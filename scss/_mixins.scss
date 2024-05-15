@@ -22,4 +22,4 @@ $breakpoints-down: (
     @media(min-width: map-get($map: $breakpoints-down, $key: $size)){
         @content; // sortie de tout contenu dans le style
     }
-}
+} 
