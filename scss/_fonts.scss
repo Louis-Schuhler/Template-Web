@@ -1,0 +1,29 @@
+@font-face{
+    font-family: "AxiformaLight";
+    src: url(../../assets/font/Axiforma-Light.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: "AxiformaRegular";
+    src: url(../../assets/font/Axiforma-Regular.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: "AxiformaBold";
+    src: url(../../assets/font/Axiforma-Bold.ttf) format("truetype");
+}
+
+
+@font-face{
+    font-family: "AxiformaBlack";
+    src: url(../../assets/font/Axiforma-Black.ttf) format("truetype");
+}
+
+// Tailles de police
+$font-xxxsm: 0.53333rem; // 8px
+$font-xxsm: 0.6rem; // 10px
+$font-xsm: 0.75rem; // 12px
+$font-sm: 0.875rem; // 14px
+$font-md: 1.125rem; // 18px
+$font-lg: 1.5rem; // 24px
+$font-xlg: 1.875rem; // 30px
