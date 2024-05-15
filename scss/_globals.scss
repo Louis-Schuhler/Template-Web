@@ -1,0 +1,76 @@
+// La taille de la police pour tous les éléments HTML est définie à 100 % ; cela permet à l'utilisateur de contrôler le niveau de zoom dans le navigateur
+html{
+    font-size: 100%;
+    box-sizing: border-box; // permet à l'utilisateur de contrôler le niveau de zoom dans le navigateur
+}
+
+// Tous les éléments et leurs pseudo-éléments (::before et ::after) héritent de la propriété box-sizing de leur parent
+*, *::before, *::after {
+    box-sizing: inherit; // https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+}
+
+// Réinitialisation des marges, paddings, et bordures pour le corps du document
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2rem;
+    color: white;
+}
+
+// Réinitialisation des styles de certains éléments HTML pour éviter les styles par défaut du navigateur
+input, button, ul, h1, h2, h3, h4, h5, p{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    list-style: none;
+}
+
+// Définition des styles pour le module Flexbox
+.flex {
+    display: flex;
+
+    // Centrage du contenu dans le conteneur avec un espacement égal entre les éléments
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    // Centrage du contenu dans le conteneur
+    &-jc-c{
+        justify-content: center;
+    }
+
+    // Alignement vertical du contenu dans le conteneur
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+// Styles pour masquer certains éléments en fonction de la taille de l'écran
+.hide-for-mobile{
+    // Masquer l'élément sur les écrans de taille moyenne et inférieure
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop{
+    // Masquer l'élément sur les écrans de taille large et supérieure
+    @include breakpoint-up(large){
+        display: none;
+    }
+}
+
+// Styles pour afficher ou masquer des éléments
+.open{
+    // Afficher l'élément
+    display: block;
+    opacity: 1;
+}
+
+.close{
+    // Masquer l'élément
+    display: none;
+    opacity: 0;
+}
